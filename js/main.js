@@ -79,3 +79,65 @@ document.addEventListener('DOMContentLoaded', function() {
     // Appel initial pour positionner l'image correctement au chargement de la page
     updateImagePosition();
 });
+
+//carrousels projet
+
+document.addEventListener('DOMContentLoaded', function() {
+    const switchBtns = document.querySelectorAll('.switch-btn');
+    const uxProjects = document.querySelector('.ux-ui-projects');
+    const devProjects = document.querySelector('.dev-projects');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let currentSlide = 0;
+    const slidesPerView = 3;
+
+    function showProjects(type) {
+        if (type === 'ux-ui') {
+            uxProjects.classList.add('active');
+            devProjects.classList.remove('active');
+        } else {
+            uxProjects.classList.remove('active');
+            devProjects.classList.add('active');
+        }
+        currentSlide = 0;
+        updateSlide();
+    }
+
+    function updateSlide() {
+        const activeGrid = document.querySelector('.projects-grid.active');
+        const projects = activeGrid.querySelectorAll('.project-item');
+        projects.forEach((project, index) => {
+            if (index >= currentSlide && index < currentSlide + slidesPerView) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    }
+
+    switchBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            switchBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            showProjects(this.dataset.type);
+        });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const activeGrid = document.querySelector('.projects-grid.active');
+        const projectsCount = activeGrid.querySelectorAll('.project-item').length;
+        currentSlide = Math.max(currentSlide - slidesPerView, 0);
+        updateSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const activeGrid = document.querySelector('.projects-grid.active');
+        const projectsCount = activeGrid.querySelectorAll('.project-item').length;
+        currentSlide = Math.min(currentSlide + slidesPerView, projectsCount - slidesPerView);
+        updateSlide();
+    });
+
+    // Initialize
+    showProjects('ux-ui');
+});

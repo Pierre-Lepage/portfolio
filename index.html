@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#home">
                     <div class="logo-symbol me-2">LP</div>
@@ -89,8 +89,42 @@
                 Ma communication efficace me permet de collaborer avec diverses personnalités. Mon <span style="font-weight: bold;">engagement</span> se concentre sur la <span style="font-weight: bold;">satisfaction des utilisateurs et des clients</span>, en privilégiant des solutions de qualité. La veille technologique et la recherche constante d’innovation sont des aspects clés de mon approche professionnelle.</p>
         </div>
     </section>
-    
-    <section id="skills" class="py-5">
+    <section id="competences" class="py-5">
+        <div class="container">
+            <div class="title-container">
+                <div class="title-icon"></div>
+                <h2 class="title-text">Compétences</h2>
+            </div>
+            <div class="competences-container">
+                <div class="competences-icons">
+                    <img src="./images/icons/html5-icon.svg" alt="HTML5" class="competence-icon">
+                    <img src="./images/icons/css3-icon.svg" alt="CSS3" class="competence-icon">
+                    <img src="./images/icons/bootstrap-icon.svg" alt="Bootstrap" class="competence-icon">
+                    <img src="./images/icons/react-icon.svg" alt="React" class="competence-icon">
+                    <img src="./images/icons/js-icon.svg" alt="JavaScript" class="competence-icon">
+                    <img src="./images/icons/nodejs-icon.svg" alt="Node.js" class="competence-icon">
+                    <img src="./images/icons/php-icon.svg" alt="PHP" class="competence-icon">
+                    <img src="./images/icons/mongodb-icon.svg" alt="MongoDB" class="competence-icon">
+                    <img src="./images/icons/mysql-icon.svg" alt="MySQL" class="competence-icon">
+                    <img src="./images/icons/github-icon.svg" alt="GitHub" class="competence-icon">
+                    <img src="./images/icons/vscode-icon.svg" alt="Visual Studio Code" class="competence-icon">
+                    <img src="./images/icons/figma-icon.svg" alt="Figma" class="competence-icon">
+                    <img src="./images/icons/photoshop-icon.svg" alt="Adobe Photoshop" class="competence-icon">
+                    <img src="./images/icons/illustrator-icon.svg" alt="Adobe Illustrator" class="competence-icon">
+                    <img src="./images/icons/indesign-icon.svg" alt="Adobe InDesign" class="competence-icon">
+                </div>
+                <div class="cv-preview">
+                    <a href="./images/CV-PierreLepage.pdf" target="_blank" class="cv-link">
+                        <img src="./images/CV-PierreLepage.jpg" alt="Aperçu du CV" class="img-fluid">
+                        <div class="cv-overlay">
+                            <span>Voir le CV complet</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="skills" class="py-5">
         <div class="container">
             <h2 class="mb-4">Compétences</h2>
             <ul class="list-group">
@@ -98,36 +132,94 @@
                 <li class="list-group-item">Développement web</li>
                 <li class="list-group-item">HTML / CSS</li>
                 <li class="list-group-item">JavaScript</li>
-                <!-- Ajoutez d'autres compétences ici -->
+             
             </ul>
         </div>
     </section>
-    
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="mb-4">Projets</h2>
-            <div class="row">
-                <!-- Exemple de projet -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="path/to/project-image.jpg" class="card-img-top" alt="Nom du projet">
-                        <div class="card-body">
-                            <h5 class="card-title">Nom du projet</h5>
-                            <p class="card-text">Description courte du projet.</p>
-                            <a href="#" class="btn btn-primary">Voir le projet</a>
+     -->
+     <section id="projets" class="py-5">
+     <div class="container">
+         <h2 class="text-center mb-4">Mes Projets</h2>
+         <div class="switch-container mb-4">
+             <button class="switch-btn active" data-type="ux-ui">UX / UI</button>
+             <button class="switch-btn" data-type="dev">Développement</button>
+         </div>
+            <div class="projects-carousel">
+                <div class="projects-grid ux-ui-projects active">
+                    <div class="project-item">
+                        <img src="./images/projets/projet1.png" alt="UX Project 1">
+                        <div class="project-info">
+                            <h3>Projet UX 1</h3>
+                            <a href="path/to/ux-project1.pdf" target="_blank" class="project-link">Voir le PDF</a>
                         </div>
                     </div>
+                    <div class="project-item">
+                        <img src="./images/projets/projet2.png" alt="UX Project 2">
+                        <div class="project-info">
+                            <h3>Projet UX 2</h3>
+                            <a href="path/to/ux-project2.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/projets/projet3.png" alt="UX Project 3">
+                        <div class="project-info">
+                            <h3>Projet UX 3</h3>
+                            <a href="path/to/ux-project3.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/projets/projet3.png" alt="UX Project 3">
+                        <div class="project-info">
+                            <h3>Projet UX 3</h3>
+                            <a href="path/to/ux-project3.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                        </div>
+                    </div>
+                    <!-- Ajoutez d'autres projets UX/UI ici si nécessaire -->
                 </div>
-                <!-- Répétez pour chaque projet -->
+                <div class="projects-grid dev-projects">
+                    <div class="project-item">
+                        <img src="./images/projets/projet3.png" alt="Annei Project">
+                        <div class="project-info">
+                            <h3>Annei</h3>
+                            <a href="https://annei-site.com" target="_blank" class="project-link">Voir le site</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/projets/projet1.png" alt="Movinpark Project">
+                        <div class="project-info">
+                            <h3>Movinpark</h3>
+                            <a href="https://movinpark.com" target="_blank" class="project-link">Voir le site</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/projets/projet2.png" alt="Portfolio Project">
+                        <div class="project-info">
+                            <h3>Portfolio</h3>
+                            <a href="https://votre-portfolio.com" target="_blank" class="project-link">Voir le site</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/projets/projet2.png" alt="Portfolio Project">
+                        <div class="project-info">
+                            <h3>Portfolio</h3>
+                            <a href="https://votre-portfolio.com" target="_blank" class="project-link">Voir le site</a>
+                        </div>
+                    </div>
+                    <!-- Ajoutez d'autres projets de développement ici si nécessaire -->
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
             </div>
         </div>
     </section>
     
-    <section id="experience" class="py-5">
+    <!-- <section id="experience" class="py-5">
         <div class="container">
             <h2 class="mb-4">Expérience professionnelle</h2>
             <div class="timeline">
-                <!-- Exemple d'expérience -->
+               
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Titre du poste</h5>
@@ -136,10 +228,10 @@
                         <p class="card-text"><small class="text-muted">Période d'emploi</small></p>
                     </div>
                 </div>
-                <!-- Répétez pour chaque expérience -->
+               
             </div>
         </div>
-    </section>
+    </section> -->
     
     <section id="contact" class="py-5 bg-light">
         <div class="container">
