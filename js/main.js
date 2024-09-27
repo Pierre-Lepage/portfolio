@@ -83,50 +83,31 @@ document.addEventListener('DOMContentLoaded', function() {
 //carrousels projet
 
 document.addEventListener('DOMContentLoaded', function() {
-    const switchBtns = document.querySelectorAll('.switch-btn');
-    const uxProjects = document.querySelector('.ux-ui-projects');
-    const devProjects = document.querySelector('.dev-projects');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-
     let currentSlide = 0;
-    const slidesPerView = 3;
-
-    function showProjects(type) {
-        if (type === 'ux-ui') {
-            uxProjects.classList.add('active');
-            devProjects.classList.remove('active');
-        } else {
-            uxProjects.classList.remove('active');
-            devProjects.classList.add('active');
-        }
-        currentSlide = 0;
-        updateSlide();
-    }
+    let slidesPerView = 3; // Par défaut, 3 projets visibles
 
     function updateSlide() {
         const activeGrid = document.querySelector('.projects-grid.active');
         const projects = activeGrid.querySelectorAll('.project-item');
-        projects.forEach((project, index) => {
-            if (index >= currentSlide && index < currentSlide + slidesPerView) {
-                project.style.display = 'block';
-            } else {
-                project.style.display = 'none';
-            }
+        const screenWidth = window.innerWidth;
+
+        // Ajuster le nombre de slides visibles en fonction de la taille de l'écran
+        slidesPerView = screenWidth < 992 ? 2 : 3;
+
+        // Cacher tous les éléments
+        projects.forEach((project) => {
+            project.style.display = 'none';
         });
+
+        // Afficher les éléments selon 'currentSlide' et 'slidesPerView'
+        for (let i = currentSlide; i < currentSlide + slidesPerView && i < projects.length; i++) {
+            projects[i].style.display = 'block';
+        }
     }
 
-    switchBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            switchBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            showProjects(this.dataset.type);
-        });
-    });
-
     prevBtn.addEventListener('click', () => {
-        const activeGrid = document.querySelector('.projects-grid.active');
-        const projectsCount = activeGrid.querySelectorAll('.project-item').length;
         currentSlide = Math.max(currentSlide - slidesPerView, 0);
         updateSlide();
     });
@@ -138,6 +119,26 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlide();
     });
 
-    // Initialize
-    showProjects('ux-ui');
+    // Événement pour basculer entre les sections "UX / UI" et "Développement"
+    const switchButtons = document.querySelectorAll('.switch-btn');
+    switchButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            switchButtons.forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+
+            const type = e.target.getAttribute('data-type');
+            document.querySelectorAll('.projects-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+            document.querySelector(`.${type}-projects`).classList.add('active');
+
+            // Réinitialiser le carrousel pour la nouvelle section
+            currentSlide = 0;
+            updateSlide();
+        });
+    });
+
+    // Initialiser l'affichage des slides
+    window.addEventListener('resize', updateSlide);
+    updateSlide();
 });

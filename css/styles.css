@@ -348,7 +348,7 @@ section {
 .projects-grid {
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 10px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -494,7 +494,9 @@ p {
 .cv-preview {
   width: 70%;
 }
-
+.projects-grid {
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les écrans de moins de 992px */
+}
 }
 
 /* @media (min-width: 768px) {
