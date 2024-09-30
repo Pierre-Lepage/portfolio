@@ -1,3 +1,26 @@
+# package.json
+
+```json
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Bienvenue sur mon portfolio en ligne, conçu pour présenter mes compétences et mon expérience en tant que développeur web et designer avec plus de 10 ans d’expérience dans le domaine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "nodemailer": "^6.9.15"
+  }
+}
+
+```
+
 # index.html
 
 ```html
@@ -143,50 +166,71 @@
             <div class="projects-carousel">
                 <div class="projects-grid ux-ui-projects active">
                     <div class="project-item">
-                        <img src="./images/projets/projet1.png" alt="UX Project 1">
+                        <img src="./images/projets/nemeio.png" alt="UX Project 1">
                         <div class="project-info">
-                            <h3>maquette site nemeio</h3>
-                            <a href="www.nemeio.com" target="_blank" class="project-link">Voir le site</a>
+                            <h3>Maquette site nemeio</h3>
+                            <a href="https://www.nemeio.com/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet2.png" alt="UX Project 2">
+                        <img src="./images/projets/solaari.png" alt="UX Project 2">
                         <div class="project-info">
-                            <h3>Projet UX 2</h3>
-                            <a href="path/to/ux-project2.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>Maquette site solaari</h3>
+                            <a href="https://www.solaari.com/fr/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="UX Project 3">
+                        <img src="./images/projets/thibaudGuide.png" alt="UX Project 3">
                         <div class="project-info">
-                            <h3>Projet UX 3</h3>
-                            <a href="path/to/ux-project3.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>maquette site guide</h3>
+                            <a href="https://www.thibaud-guide.com/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="UX Project 4">
+                        <img src="./images/projets/solaariApp.png" alt="UX Project 4">
                         <div class="project-info">
-                            <h3>Projet UX 4</h3>
-                            <a href="path/to/ux-project4.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>maquette app solaari</h3>
+                            <a href="https://play.google.com/store/apps/details?id=com.groupeldlc.solaari&hl=fr&pli=1" target="_blank" class="project-link">Voir l'app</a>
                         </div>
                     </div>
+                    <div class="project-item">
+                        <img src="./images/projets/nemeioLogiciel.png" alt="UX Project 5">
+                        <div class="project-info">
+                            <h3>Maquette logiciel nemeio</h3>
+                            <!-- <a href="https://annei-site.com" target="_blank" class="project-link">Voir le site</a> -->
+                        </div>
+                    </div>
+                        <div class="project-item">
+                            <img src="./images/projets/foxSpiritSite.png" alt="UX Project 3">
+                            <div class="project-info">
+                                <h3>maquette site foxSpirit</h3>
+                                <a href="./images/projets/foxSpiritSite.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <img src="./images/projets/inovuSite.png" alt="UX Project 4">
+                            <div class="project-info">
+                                <h3>maquette site inovu</h3>
+                                <a href="./images/projets/inovuSite.pdf" target="_blank" class="project-link">Voir l'app</a>
+                            </div>
+                        </div>
                 </div>
                 <div class="projects-grid dev-projects">
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="Annei Project">
+                        <img src="./images/projets/thibaudGuide.png" alt="thibaud-guide">
                         <div class="project-info">
-                            <h3>Annei</h3>
-                            <a href="https://annei-site.com" target="_blank" class="project-link">Voir le site</a>
+                            <h3>site de guide</h3>
+                            <a href="https://www.thibaud-guide.com/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet1.png" alt="Movinpark Project">
+                        <img src="./images/projets/bluejamApp.png" alt="Bluejam">
                         <div class="project-info">
-                            <h3>Movinpark</h3>
-                            <a href="https://movinpark.com" target="_blank" class="project-link">Voir le site</a>
+                            <h3>Projet iot bluejam</h3>
+                            <a href="https://github.com/mmarzou/BlueJam" target="_blank" class="project-link">Voir le repo</a>
                         </div>
                     </div>
-                    <div class="project-item">
+                    <!-- <div class="project-item">
                         <img src="./images/projets/projet2.png" alt="Portfolio Project">
                         <div class="project-info">
                             <h3>Portfolio</h3>
@@ -199,7 +243,7 @@
                             <h3>Autre Projet</h3>
                             <a href="https://autre-projet.com" target="_blank" class="project-link">Voir le site</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="carousel-controls">
@@ -894,6 +938,7 @@ section {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 3px solid #f8d7da;
 }
 
 .project-item img {
@@ -1067,6 +1112,14 @@ This is a binary file of the type: Binary
 
 This is a binary file of the type: Image
 
+# images/inovuSite.pdf
+
+This is a binary file of the type: PDF
+
+# images/foxSpiritSite.pdf
+
+This is a binary file of the type: PDF
+
 # images/fond2.svg
 
 This is a file of the type: SVG Image
@@ -1103,6 +1156,14 @@ This is a binary file of the type: PDF
 
 This is a binary file of the type: Image
 
+# images/projets/thibaudGuide.png
+
+This is a binary file of the type: Image
+
+# images/projets/solaariApp.png
+
+This is a binary file of the type: Image
+
 # images/projets/projet3.png
 
 This is a binary file of the type: Image
@@ -1112,6 +1173,34 @@ This is a binary file of the type: Image
 This is a binary file of the type: Image
 
 # images/projets/projet1.png
+
+This is a binary file of the type: Image
+
+# images/projets/portrait2.png
+
+This is a binary file of the type: Image
+
+# images/projets/nemeioLogiciel.png
+
+This is a binary file of the type: Image
+
+# images/projets/nemeio.png
+
+This is a binary file of the type: Image
+
+# images/projets/foxSpiritSite.png
+
+This is a binary file of the type: Image
+
+# images/projets/bluejamApp.png
+
+This is a binary file of the type: Image
+
+# images/projets/Solaari.png
+
+This is a binary file of the type: Image
+
+# images/projets/InovuSite.png
 
 This is a binary file of the type: Image
 

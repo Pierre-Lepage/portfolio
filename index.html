@@ -233,7 +233,7 @@
                 <div class="title-icon"></div>
                 <h2 class="title-text">Contactez-moi</h2>
             </div>
-            <form id="contact-form">
+            <form id="contact-form"action="https://formspree.io/f/mvgpedoe" method="POST">
                 <div class="mb-3">
                     <input type="text" class="form-control" name="name" placeholder="Nom" required>
                 </div>
@@ -246,7 +246,10 @@
                 <div class="mb-3">
                     <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
+                <input type="text" name="_gotcha" style="display:none">
                 <button type="submit" class="btn btn-primary">Envoyer</button>
+                <input type="hidden" name="_next" value="https://pierre-lepage.github.io/portfolio//merci.html">
+                <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
             </form>
         </div>
     </section>

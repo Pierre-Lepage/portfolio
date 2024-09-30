@@ -134,3 +134,33 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateSlide);
     updateSlide();
 });
+
+// Formulaire
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Message envoyé avec succès !');
+                form.reset();
+            } else {
+                alert('Une erreur est survenue. Veuillez réessayer.');
+            }
+        })
+        .catch(error => {
+            alert('Une erreur est survenue. Veuillez réessayer.');
+            console.error(error);
+        });
+    });
+});
