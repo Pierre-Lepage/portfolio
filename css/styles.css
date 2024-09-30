@@ -103,7 +103,7 @@ p {
   border-left: 15px solid #EEC0C0b4;
   margin-right: 10px;
   border-radius: 3px;
-  margin-bottom: 22px;
+  margin-bottom: 8px;
 }
 .title-text {
   
@@ -326,7 +326,7 @@ section {
 }
 
 .switch-btn {
-  padding: 10px 20px;
+  padding: 5px 15px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -365,6 +365,7 @@ section {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 3px solid #f8d7da;
 }
 
 .project-item img {
@@ -417,6 +418,11 @@ section {
 
 
 /* Contact Form */
+
+#contact {
+  background-color: #f8d7da;
+}
+
 #contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -424,7 +430,7 @@ section {
 
 /* Footer */
 footer {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 /* Media Queries */

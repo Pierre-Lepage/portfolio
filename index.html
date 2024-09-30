@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#home">
+                <a class="navbar-brand d-flex align-items-center" href="#hero">
                     <div class="logo-symbol me-2">LP</div>
                     <div class="logo-text">Lepage Pierre</div>
                 </a>
@@ -24,17 +24,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Présentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>                  
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item">
                             <div class="social-icons d-flex align-items-center ms-lg-3">
                                 <div class="vertical-line me-3"></div>
-                                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="nav-link">
+                                <a href="https://www.linkedin.com/in/pierre-lepage-b00668ba/" target="_blank" class="nav-link">
                                     <i class="fab fa-linkedin fa-lg"></i>
                                 </a>
-                                <a href="https://github.com/yourusername" target="_blank" class="nav-link">
+                                <a href="https://github.com/Pierre-Lepage" target="_blank" class="nav-link">
                                     <i class="fab fa-github fa-lg"></i>
                                 </a>
                             </div>
@@ -45,7 +45,7 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section id = "hero" class="hero">
             <div class="background parallax" data-speed="0.5"></div>
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
@@ -56,7 +56,9 @@
                             <div class="highlight">web.</div>
                         </div>
                         <p class="mb-4"><br>Actuellement en formation développeur Full-stack,<br>je bénéficie de 10 ans d'expérience sur des missions<br>en tant que professionnel du design.</p>
+                        <a href="#contact">
                         <button class="btn cta-button">Contactez-moi</button>
+                        </a>
                     </div>
                     <div class="col-lg-6 portrait-container">
                         <div class="portrait"></div>
@@ -124,22 +126,13 @@
             </div>
         </div>
     </section>
-    <!-- <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="mb-4">Compétences</h2>
-            <ul class="list-group">
-                <li class="list-group-item">UX / UI Design</li>
-                <li class="list-group-item">Développement web</li>
-                <li class="list-group-item">HTML / CSS</li>
-                <li class="list-group-item">JavaScript</li>
-             
-            </ul>
-        </div>
-    </section>
-     -->
+    
      <section id="projets" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Mes Projets</h2>
+            <div class="title-container">
+                <div class="title-icon"></div>
+                <h2 class="title-text">Projets</h2>
+            </div>
             <div class="switch-container mb-4">
                 <button class="switch-btn active" data-type="ux-ui">UX / UI</button>
                 <button class="switch-btn" data-type="dev">Développement</button>
@@ -147,50 +140,71 @@
             <div class="projects-carousel">
                 <div class="projects-grid ux-ui-projects active">
                     <div class="project-item">
-                        <img src="./images/projets/projet1.png" alt="UX Project 1">
+                        <img src="./images/projets/nemeio.png" alt="UX Project 1">
                         <div class="project-info">
-                            <h3>Projet UX 1</h3>
-                            <a href="path/to/ux-project1.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>Maquette site nemeio</h3>
+                            <a href="https://www.nemeio.com/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet2.png" alt="UX Project 2">
+                        <img src="./images/projets/solaari.png" alt="UX Project 2">
                         <div class="project-info">
-                            <h3>Projet UX 2</h3>
-                            <a href="path/to/ux-project2.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>Maquette site solaari</h3>
+                            <a href="https://www.solaari.com/fr/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="UX Project 3">
+                        <img src="./images/projets/thibaudGuide.png" alt="UX Project 3">
                         <div class="project-info">
-                            <h3>Projet UX 3</h3>
-                            <a href="path/to/ux-project3.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>maquette site guide</h3>
+                            <a href="https://www.thibaud-guide.com/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="UX Project 4">
+                        <img src="./images/projets/solaariApp.png" alt="UX Project 4">
                         <div class="project-info">
-                            <h3>Projet UX 4</h3>
-                            <a href="path/to/ux-project4.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>maquette app solaari</h3>
+                            <a href="https://play.google.com/store/apps/details?id=com.groupeldlc.solaari&hl=fr&pli=1" target="_blank" class="project-link">Voir l'app</a>
                         </div>
                     </div>
+                    <div class="project-item">
+                        <img src="./images/projets/nemeioLogiciel.png" alt="UX Project 5">
+                        <div class="project-info">
+                            <h3>Maquette logiciel nemeio</h3>
+                            <!-- <a href="https://annei-site.com" target="_blank" class="project-link">Voir le site</a> -->
+                        </div>
+                    </div>
+                        <div class="project-item">
+                            <img src="./images/projets/foxSpiritSite.png" alt="UX Project 3">
+                            <div class="project-info">
+                                <h3>maquette site foxSpirit</h3>
+                                <a href="./images/projets/foxSpiritSite.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <img src="./images/projets/inovuSite.png" alt="UX Project 4">
+                            <div class="project-info">
+                                <h3>maquette site inovu</h3>
+                                <a href="./images/projets/inovuSite.pdf" target="_blank" class="project-link">Voir l'app</a>
+                            </div>
+                        </div>
                 </div>
                 <div class="projects-grid dev-projects">
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="Annei Project">
+                        <img src="./images/projets/thibaudGuide.png" alt="thibaud-guide">
                         <div class="project-info">
-                            <h3>Annei</h3>
-                            <a href="https://annei-site.com" target="_blank" class="project-link">Voir le site</a>
+                            <h3>site de guide</h3>
+                            <a href="https://www.thibaud-guide.com/" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet1.png" alt="Movinpark Project">
+                        <img src="./images/projets/bluejamApp.png" alt="Bluejam">
                         <div class="project-info">
-                            <h3>Movinpark</h3>
-                            <a href="https://movinpark.com" target="_blank" class="project-link">Voir le site</a>
+                            <h3>Projet iot bluejam</h3>
+                            <a href="https://github.com/mmarzou/BlueJam" target="_blank" class="project-link">Voir le repo</a>
                         </div>
                     </div>
-                    <div class="project-item">
+                    <!-- <div class="project-item">
                         <img src="./images/projets/projet2.png" alt="Portfolio Project">
                         <div class="project-info">
                             <h3>Portfolio</h3>
@@ -203,7 +217,7 @@
                             <h3>Autre Projet</h3>
                             <a href="https://autre-projet.com" target="_blank" class="project-link">Voir le site</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="carousel-controls">
@@ -213,27 +227,12 @@
         </div>
     </section>
     
-    <!-- <section id="experience" class="py-5">
+    <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Expérience professionnelle</h2>
-            <div class="timeline">
-               
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Titre du poste</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Nom de l'entreprise</h6>
-                        <p class="card-text">Description des responsabilités et réalisations.</p>
-                        <p class="card-text"><small class="text-muted">Période d'emploi</small></p>
-                    </div>
-                </div>
-               
+            <div class="title-container">
+                <div class="title-icon"></div>
+                <h2 class="title-text">Contactez-moi</h2>
             </div>
-        </div>
-    </section> -->
-    
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="mb-4">Contactez-moi</h2>
             <form id="contact-form">
                 <div class="mb-3">
                     <input type="text" class="form-control" name="name" placeholder="Nom" required>

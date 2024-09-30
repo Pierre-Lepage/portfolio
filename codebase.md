@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#home">
+                <a class="navbar-brand d-flex align-items-center" href="#hero">
                     <div class="logo-symbol me-2">LP</div>
                     <div class="logo-text">Lepage Pierre</div>
                 </a>
@@ -27,17 +27,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Présentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>                  
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item">
                             <div class="social-icons d-flex align-items-center ms-lg-3">
                                 <div class="vertical-line me-3"></div>
-                                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="nav-link">
+                                <a href="https://www.linkedin.com/in/pierre-lepage-b00668ba/" target="_blank" class="nav-link">
                                     <i class="fab fa-linkedin fa-lg"></i>
                                 </a>
-                                <a href="https://github.com/yourusername" target="_blank" class="nav-link">
+                                <a href="https://github.com/Pierre-Lepage" target="_blank" class="nav-link">
                                     <i class="fab fa-github fa-lg"></i>
                                 </a>
                             </div>
@@ -48,7 +48,7 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section id = "hero" class="hero">
             <div class="background parallax" data-speed="0.5"></div>
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
@@ -59,7 +59,9 @@
                             <div class="highlight">web.</div>
                         </div>
                         <p class="mb-4"><br>Actuellement en formation développeur Full-stack,<br>je bénéficie de 10 ans d'expérience sur des missions<br>en tant que professionnel du design.</p>
+                        <a href="#contact">
                         <button class="btn cta-button">Contactez-moi</button>
+                        </a>
                     </div>
                     <div class="col-lg-6 portrait-container">
                         <div class="portrait"></div>
@@ -127,33 +129,24 @@
             </div>
         </div>
     </section>
-    <!-- <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="mb-4">Compétences</h2>
-            <ul class="list-group">
-                <li class="list-group-item">UX / UI Design</li>
-                <li class="list-group-item">Développement web</li>
-                <li class="list-group-item">HTML / CSS</li>
-                <li class="list-group-item">JavaScript</li>
-             
-            </ul>
-        </div>
-    </section>
-     -->
+    
      <section id="projets" class="py-5">
-     <div class="container">
-         <h2 class="text-center mb-4">Mes Projets</h2>
-         <div class="switch-container mb-4">
-             <button class="switch-btn active" data-type="ux-ui">UX / UI</button>
-             <button class="switch-btn" data-type="dev">Développement</button>
-         </div>
+        <div class="container">
+            <div class="title-container">
+                <div class="title-icon"></div>
+                <h2 class="title-text">Projets</h2>
+            </div>
+            <div class="switch-container mb-4">
+                <button class="switch-btn active" data-type="ux-ui">UX / UI</button>
+                <button class="switch-btn" data-type="dev">Développement</button>
+            </div>
             <div class="projects-carousel">
                 <div class="projects-grid ux-ui-projects active">
                     <div class="project-item">
                         <img src="./images/projets/projet1.png" alt="UX Project 1">
                         <div class="project-info">
-                            <h3>Projet UX 1</h3>
-                            <a href="path/to/ux-project1.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>maquette site nemeio</h3>
+                            <a href="www.nemeio.com" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
                     <div class="project-item">
@@ -171,13 +164,12 @@
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet3.png" alt="UX Project 3">
+                        <img src="./images/projets/projet3.png" alt="UX Project 4">
                         <div class="project-info">
-                            <h3>Projet UX 3</h3>
-                            <a href="path/to/ux-project3.pdf" target="_blank" class="project-link">Voir le PDF</a>
+                            <h3>Projet UX 4</h3>
+                            <a href="path/to/ux-project4.pdf" target="_blank" class="project-link">Voir le PDF</a>
                         </div>
                     </div>
-                    <!-- Ajoutez d'autres projets UX/UI ici si nécessaire -->
                 </div>
                 <div class="projects-grid dev-projects">
                     <div class="project-item">
@@ -202,13 +194,12 @@
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/projet2.png" alt="Portfolio Project">
+                        <img src="./images/projets/projet2.png" alt="Autre Project">
                         <div class="project-info">
-                            <h3>Portfolio</h3>
-                            <a href="https://votre-portfolio.com" target="_blank" class="project-link">Voir le site</a>
+                            <h3>Autre Projet</h3>
+                            <a href="https://autre-projet.com" target="_blank" class="project-link">Voir le site</a>
                         </div>
                     </div>
-                    <!-- Ajoutez d'autres projets de développement ici si nécessaire -->
                 </div>
             </div>
             <div class="carousel-controls">
@@ -218,27 +209,12 @@
         </div>
     </section>
     
-    <!-- <section id="experience" class="py-5">
+    <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Expérience professionnelle</h2>
-            <div class="timeline">
-               
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Titre du poste</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Nom de l'entreprise</h6>
-                        <p class="card-text">Description des responsabilités et réalisations.</p>
-                        <p class="card-text"><small class="text-muted">Période d'emploi</small></p>
-                    </div>
-                </div>
-               
+            <div class="title-container">
+                <div class="title-icon"></div>
+                <h2 class="title-text">Contactez-moi</h2>
             </div>
-        </div>
-    </section> -->
-    
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="mb-4">Contactez-moi</h2>
             <form id="contact-form">
                 <div class="mb-3">
                     <input type="text" class="form-control" name="name" placeholder="Nom" required>
@@ -460,84 +436,57 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //Chronologie
-
-// Ajoutez ce code à votre fichier main.js ou créez un nouveau fichier JavaScript
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const frameContainer = document.querySelector('.frame-container');
     const frameImage = document.querySelector('.frame-image');
+    let hasFadedIn = false;
 
-    function updateImagePosition() {
-        if (window.innerWidth <= 991) {  // Vérifier si on est en mode mobile
+    function handleScroll() {
+        if (!hasFadedIn) {
             const containerRect = frameContainer.getBoundingClientRect();
-            const containerHeight = containerRect.height;
             const viewportHeight = window.innerHeight;
-            const scrollProgress = (containerRect.top * -1) / (containerHeight - viewportHeight);
 
-            if (scrollProgress >= 0 && scrollProgress <= 1) {
-                const translateY = scrollProgress * frameImage.offsetHeight;
-                frameImage.style.transform = `translateY(-${translateY}px)`;
+            if (containerRect.top < viewportHeight) {
+                frameImage.style.transition = 'opacity 1s ease-out';
+                frameImage.style.opacity = 1;
+                hasFadedIn = true;
             }
-        } else {
-            // Réinitialiser la position de l'image en mode desktop
-            frameImage.style.transform = 'translateY(0)';
         }
     }
 
-    window.addEventListener('scroll', updateImagePosition);
-    window.addEventListener('resize', updateImagePosition);
-
-    // Appel initial pour positionner l'image correctement au chargement de la page
-    updateImagePosition();
+    frameImage.style.opacity = 0; // Cache l'image initialement
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Vérifier au chargement de la page
 });
 
 //carrousels projet
 
 document.addEventListener('DOMContentLoaded', function() {
-    const switchBtns = document.querySelectorAll('.switch-btn');
-    const uxProjects = document.querySelector('.ux-ui-projects');
-    const devProjects = document.querySelector('.dev-projects');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-
     let currentSlide = 0;
-    const slidesPerView = 3;
-
-    function showProjects(type) {
-        if (type === 'ux-ui') {
-            uxProjects.classList.add('active');
-            devProjects.classList.remove('active');
-        } else {
-            uxProjects.classList.remove('active');
-            devProjects.classList.add('active');
-        }
-        currentSlide = 0;
-        updateSlide();
-    }
+    let slidesPerView = 3; // Par défaut, 3 projets visibles
 
     function updateSlide() {
         const activeGrid = document.querySelector('.projects-grid.active');
         const projects = activeGrid.querySelectorAll('.project-item');
-        projects.forEach((project, index) => {
-            if (index >= currentSlide && index < currentSlide + slidesPerView) {
-                project.style.display = 'block';
-            } else {
-                project.style.display = 'none';
-            }
+        const screenWidth = window.innerWidth;
+
+        // Ajuster le nombre de slides visibles en fonction de la taille de l'écran
+        slidesPerView = screenWidth < 992 ? 2 : 3;
+
+        // Cacher tous les éléments
+        projects.forEach((project) => {
+            project.style.display = 'none';
         });
+
+        // Afficher les éléments selon 'currentSlide' et 'slidesPerView'
+        for (let i = currentSlide; i < currentSlide + slidesPerView && i < projects.length; i++) {
+            projects[i].style.display = 'block';
+        }
     }
 
-    switchBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            switchBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            showProjects(this.dataset.type);
-        });
-    });
-
     prevBtn.addEventListener('click', () => {
-        const activeGrid = document.querySelector('.projects-grid.active');
-        const projectsCount = activeGrid.querySelectorAll('.project-item').length;
         currentSlide = Math.max(currentSlide - slidesPerView, 0);
         updateSlide();
     });
@@ -549,62 +498,31 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlide();
     });
 
-    // Initialize
-    showProjects('ux-ui');
+    // Événement pour basculer entre les sections "UX / UI" et "Développement"
+    const switchButtons = document.querySelectorAll('.switch-btn');
+    switchButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            switchButtons.forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+
+            const type = e.target.getAttribute('data-type');
+            document.querySelectorAll('.projects-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+            document.querySelector(`.${type}-projects`).classList.add('active');
+
+            // Réinitialiser le carrousel pour la nouvelle section
+            currentSlide = 0;
+            updateSlide();
+        });
+    });
+
+    // Initialiser l'affichage des slides
+    window.addEventListener('resize', updateSlide);
+    updateSlide();
 });
+
 ```
-
-# images/portrait2.png
-
-This is a binary file of the type: Image
-
-# images/portrait.png
-
-This is a binary file of the type: Image
-
-# images/portrait-fond.psd
-
-This is a binary file of the type: Binary
-
-# images/portrait-fond.png
-
-This is a binary file of the type: Image
-
-# images/fond2.svg
-
-This is a file of the type: SVG Image
-
-# images/fond2.png
-
-This is a binary file of the type: Image
-
-# images/fond1.svg
-
-This is a file of the type: SVG Image
-
-# images/fond1.png
-
-This is a binary file of the type: Image
-
-# images/chrono2.svg
-
-This is a file of the type: SVG Image
-
-# images/chrono.svg
-
-This is a file of the type: SVG Image
-
-# images/Frame 17.png
-
-This is a binary file of the type: Image
-
-# images/CV-PierreLepage.pdf
-
-This is a binary file of the type: PDF
-
-# images/CV-PierreLepage.jpg
-
-This is a binary file of the type: Image
 
 # css/styles.css
 
@@ -714,7 +632,7 @@ p {
   border-left: 15px solid #EEC0C0b4;
   margin-right: 10px;
   border-radius: 3px;
-  margin-bottom: 22px;
+  margin-bottom: 8px;
 }
 .title-text {
   
@@ -937,7 +855,7 @@ section {
 }
 
 .switch-btn {
-  padding: 6px 20px;
+  padding: 5px 15px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -959,7 +877,7 @@ section {
 .projects-grid {
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 10px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -1028,6 +946,11 @@ section {
 
 
 /* Contact Form */
+
+#contact {
+  background-color: #f8d7da;
+}
+
 #contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -1035,7 +958,7 @@ section {
 
 /* Footer */
 footer {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 /* Media Queries */
@@ -1106,9 +1029,8 @@ p {
   width: 70%;
 }
 .projects-grid {
-  display: flex;
-  /* grid-template-columns: repeat(2, 1fr); */
-  gap: 15px;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les écrans de moins de 992px */
+}
 }
 
 /* @media (min-width: 768px) {
@@ -1128,6 +1050,58 @@ p {
 
 } */
 ```
+
+# images/portrait2.png
+
+This is a binary file of the type: Image
+
+# images/portrait.png
+
+This is a binary file of the type: Image
+
+# images/portrait-fond.psd
+
+This is a binary file of the type: Binary
+
+# images/portrait-fond.png
+
+This is a binary file of the type: Image
+
+# images/fond2.svg
+
+This is a file of the type: SVG Image
+
+# images/fond2.png
+
+This is a binary file of the type: Image
+
+# images/fond1.svg
+
+This is a file of the type: SVG Image
+
+# images/fond1.png
+
+This is a binary file of the type: Image
+
+# images/chrono2.svg
+
+This is a file of the type: SVG Image
+
+# images/chrono.svg
+
+This is a file of the type: SVG Image
+
+# images/Frame 17.png
+
+This is a binary file of the type: Image
+
+# images/CV-PierreLepage.pdf
+
+This is a binary file of the type: PDF
+
+# images/CV-PierreLepage.jpg
+
+This is a binary file of the type: Image
 
 # images/projets/projet3.png
 

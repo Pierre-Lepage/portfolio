@@ -49,35 +49,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //Chronologie
-
-// Ajoutez ce code à votre fichier main.js ou créez un nouveau fichier JavaScript
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const frameContainer = document.querySelector('.frame-container');
     const frameImage = document.querySelector('.frame-image');
+    let hasFadedIn = false;
 
-    function updateImagePosition() {
-        if (window.innerWidth <= 991) {  // Vérifier si on est en mode mobile
+    function handleScroll() {
+        if (!hasFadedIn) {
             const containerRect = frameContainer.getBoundingClientRect();
-            const containerHeight = containerRect.height;
             const viewportHeight = window.innerHeight;
-            const scrollProgress = (containerRect.top * -1) / (containerHeight - viewportHeight);
 
-            if (scrollProgress >= 0 && scrollProgress <= 1) {
-                const translateY = scrollProgress * frameImage.offsetHeight;
-                frameImage.style.transform = `translateY(-${translateY}px)`;
+            if (containerRect.top < viewportHeight) {
+                frameImage.style.transition = 'opacity 1s ease-out';
+                frameImage.style.opacity = 1;
+                hasFadedIn = true;
             }
-        } else {
-            // Réinitialiser la position de l'image en mode desktop
-            frameImage.style.transform = 'translateY(0)';
         }
     }
 
-    window.addEventListener('scroll', updateImagePosition);
-    window.addEventListener('resize', updateImagePosition);
-
-    // Appel initial pour positionner l'image correctement au chargement de la page
-    updateImagePosition();
+    frameImage.style.opacity = 0; // Cache l'image initialement
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Vérifier au chargement de la page
 });
 
 //carrousels projet
