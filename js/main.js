@@ -137,30 +137,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Formulaire
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Message envoyé avec succès !');
-                form.reset();
-            } else {
-                alert('Une erreur est survenue. Veuillez réessayer.');
-            }
-        })
-        .catch(error => {
-            alert('Une erreur est survenue. Veuillez réessayer.');
-            console.error(error);
-        });
-    });
-});
+var form = document.getElementById("contact-form");
+    
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.createElement("div");
+  status.style.marginTop = "1rem";
+  form.appendChild(status);
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Message envoyé avec succès !";
+      form.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! Une erreur est survenue lors de l'envoi du formulaire"
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "Oops! Une erreur est survenue lors de l'envoi du formulaire"
+  });
+}
+form.addEventListener("submit", handleSubmit)

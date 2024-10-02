@@ -1,26 +1,3 @@
-# package.json
-
-```json
-{
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Bienvenue sur mon portfolio en ligne, conçu pour présenter mes compétences et mon expérience en tant que développeur web et designer avec plus de 10 ans d’expérience dans le domaine.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.21.0",
-    "nodemailer": "^6.9.15"
-  }
-}
-
-```
-
 # index.html
 
 ```html
@@ -173,7 +150,7 @@
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="./images/projets/solaari.png" alt="UX Project 2">
+                        <img src="./images/projets/Solaari.png" alt="UX Project 2">
                         <div class="project-info">
                             <h3>Maquette site solaari</h3>
                             <a href="https://www.solaari.com/fr/" target="_blank" class="project-link">Voir le site</a>
@@ -208,7 +185,7 @@
                             </div>
                         </div>
                         <div class="project-item">
-                            <img src="./images/projets/inovuSite.png" alt="UX Project 4">
+                            <img src="./images/projets/InovuSite.png" alt="UX Project 4">
                             <div class="project-info">
                                 <h3>maquette site inovu</h3>
                                 <a href="./images/projets/inovuSite.pdf" target="_blank" class="project-link">Voir l'app</a>
@@ -259,20 +236,27 @@
                 <div class="title-icon"></div>
                 <h2 class="title-text">Contactez-moi</h2>
             </div>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/mvgpedoe" method="POST">
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="Nom" required>
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="subject" placeholder="Objet" required>
+                    <label for="subject" class="form-label">Objet</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Objet du message" required>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                 </div>
+                <input type="text" name="_gotcha" style="display:none">
                 <button type="submit" class="btn btn-primary">Envoyer</button>
+                <input type="hidden" name="_next" value="https://pierre-lepage.github.io/portfolio/merci.html">
+                <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
             </form>
         </div>
     </section>
@@ -566,6 +550,40 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSlide();
 });
 
+// Formulaire
+
+var form = document.getElementById("contact-form");
+    
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.createElement("div");
+  status.style.marginTop = "1rem";
+  form.appendChild(status);
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Message envoyé avec succès !";
+      form.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! Une erreur est survenue lors de l'envoi du formulaire"
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "Oops! Une erreur est survenue lors de l'envoi du formulaire"
+  });
+}
+form.addEventListener("submit", handleSubmit)
 ```
 
 # css/styles.css

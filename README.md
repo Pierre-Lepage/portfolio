@@ -1,6 +1,6 @@
 # Portfolio - Pierre Lepage
 
-Bienvenue sur mon portfolio en ligne, conçu pour présenter mes compétences et mon expérience en tant que développeur web et designer avec plus de 10 ans d’expérience dans le domaine.
+Bienvenue sur mon portfolio en ligne, conçu pour présenter mes compétences et mon expérience en tant que développeur web et designer avec plus de 10 ans d'expérience dans le domaine.
 
 ## Aperçu
 Ce portfolio met en avant mon parcours professionnel, mes projets réalisés et mes compétences en développement web et en design. La version actuelle est développée en HTML, CSS, JavaScript et utilise Bootstrap pour la mise en page responsive.
@@ -21,11 +21,12 @@ Ce portfolio met en avant mon parcours professionnel, mes projets réalisés et 
 - **Section "Expérience professionnelle"** : Chronologie de mon parcours professionnel en tant que graphiste et développeur.
 - **Formulaire de contact** : Formulaire fonctionnel pour permettre aux visiteurs de me contacter.
 - **Animations** : Scrolling fluide, animations CSS et gestion des images en mode responsive.
+- **Carrousel de projets** : Affichage des projets UX/UI et de développement avec navigation.
 
 ## Structure du projet
 - `index.html` : Structure principale du site avec des sections pour l'accueil, les compétences, les projets, l'expérience professionnelle et le formulaire de contact.
 - `css/styles.css` : Feuille de style personnalisée pour l'apparence du portfolio.
-- `js/main.js` : Script JavaScript pour les effets de scrolling, les animations parallax et la gestion du formulaire de contact.
+- `js/main.js` : Script JavaScript pour les effets de scrolling, les animations parallax, le carrousel de projets et la gestion du formulaire de contact.
 - `images/` : Dossier contenant les images, les illustrations et les icônes utilisés dans le site.
 
 ## Installation
@@ -33,7 +34,7 @@ Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 
 1. **Cloner le dépôt :**
     ```bash
-    git clone https://github.com/ton-nom-utilisateur/portfolio.git
+    git clone https://github.com/Pierre-Lepage/portfolio.git
     ```
 2. **Naviguer dans le dossier du projet :**
     ```bash
@@ -59,11 +60,11 @@ Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 - **Ajout de nouvelles images** : Les images des projets et de l'interface sont stockées dans le dossier `images/`. Assurez-vous d'utiliser des noms explicites pour les nouvelles images.
 
 ## Déploiement
-Ce portfolio peut être déployé en ligne en utilisant [GitHub Pages](https://pages.github.com/) :
-1. Pousser les modifications sur la branche `main` (ou `master`).
-2. Aller dans les paramètres du dépôt sur GitHub.
-3. Sous l’onglet "Pages", sélectionner la source du déploiement (`main` branch).
-4. Votre portfolio sera accessible à l'URL : `https://ton-nom-utilisateur.github.io/portfolio`.
+Ce portfolio est actuellement déployé en utilisant GitHub Pages. Vous pouvez le voir en ligne à l'adresse : https://pierre-lepage.github.io/portfolio/
+
+Pour déployer vos propres modifications :
+1. Pousser les modifications sur la branche `main`.
+2. GitHub Pages se mettra automatiquement à jour avec vos dernières modifications.
 
 ## Améliorations futures
 - Migrer le site vers une version plus dynamique utilisant **React** et **Node.js**.
@@ -73,8 +74,8 @@ Ce portfolio peut être déployé en ligne en utilisant [GitHub Pages](https://p
 ## Contact
 Pour toute question ou proposition, n'hésitez pas à me contacter :
 - **Email** : plepage@gmail.com
-- **LinkedIn** : [Pierre Lepage](https://linkedin.com/in/yourprofile)
-- **GitHub** : [PierreLepage](https://github.com/yourusername)
+- **LinkedIn** : [Pierre Lepage](https://www.linkedin.com/in/pierre-lepage-b00668ba/)
+- **GitHub** : [Pierre-Lepage](https://github.com/Pierre-Lepage)
 
 ---
 
