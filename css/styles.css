@@ -126,10 +126,9 @@ p {
   width: 100%;
   height: 100%;
   background-image: url('../images/fond1.svg');
-  background-position: bottom; /* Changez 'top' en 'bottom' */
-  background-size: cover;
-  background-repeat: repeat;
-  
+  background-position: center calc(100% + 200px); /* Ajusté pour commencer un peu plus haut */
+  background-size: cover; /* Changé pour couvrir toute la zone */
+  background-repeat: no-repeat;
   z-index: -1;
 }
 .text-content {
@@ -475,7 +474,7 @@ footer {
 }
 
 .frame-container {
-    height: 90vh; /* Ajustez selon vos besoins pour les appareils mobiles */
+    height: 100%; /* Ajustez selon vos besoins pour les appareils mobiles */
 }
 p {
   font-size: 0.8rem;

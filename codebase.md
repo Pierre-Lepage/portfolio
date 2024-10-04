@@ -48,7 +48,7 @@
         </nav>
     </header>
     <main>
-        <section id = "hero" class="hero">
+        <section id="hero" class="hero" >
             <div class="background parallax" data-speed="0.5"></div>
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
@@ -279,7 +279,7 @@
 ```md
 # Portfolio - Pierre Lepage
 
-Bienvenue sur mon portfolio en ligne, conçu pour présenter mes compétences et mon expérience en tant que développeur web et designer avec plus de 10 ans d’expérience dans le domaine.
+Bienvenue sur mon portfolio en ligne, conçu pour présenter mes compétences et mon expérience en tant que développeur web et designer avec plus de 10 ans d'expérience dans le domaine.
 
 ## Aperçu
 Ce portfolio met en avant mon parcours professionnel, mes projets réalisés et mes compétences en développement web et en design. La version actuelle est développée en HTML, CSS, JavaScript et utilise Bootstrap pour la mise en page responsive.
@@ -300,11 +300,12 @@ Ce portfolio met en avant mon parcours professionnel, mes projets réalisés et 
 - **Section "Expérience professionnelle"** : Chronologie de mon parcours professionnel en tant que graphiste et développeur.
 - **Formulaire de contact** : Formulaire fonctionnel pour permettre aux visiteurs de me contacter.
 - **Animations** : Scrolling fluide, animations CSS et gestion des images en mode responsive.
+- **Carrousel de projets** : Affichage des projets UX/UI et de développement avec navigation.
 
 ## Structure du projet
 - `index.html` : Structure principale du site avec des sections pour l'accueil, les compétences, les projets, l'expérience professionnelle et le formulaire de contact.
 - `css/styles.css` : Feuille de style personnalisée pour l'apparence du portfolio.
-- `js/main.js` : Script JavaScript pour les effets de scrolling, les animations parallax et la gestion du formulaire de contact.
+- `js/main.js` : Script JavaScript pour les effets de scrolling, les animations parallax, le carrousel de projets et la gestion du formulaire de contact.
 - `images/` : Dossier contenant les images, les illustrations et les icônes utilisés dans le site.
 
 ## Installation
@@ -312,7 +313,7 @@ Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 
 1. **Cloner le dépôt :**
     \`\`\`bash
-    git clone https://github.com/ton-nom-utilisateur/portfolio.git
+    git clone https://github.com/Pierre-Lepage/portfolio.git
     \`\`\`
 2. **Naviguer dans le dossier du projet :**
     \`\`\`bash
@@ -338,11 +339,11 @@ Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 - **Ajout de nouvelles images** : Les images des projets et de l'interface sont stockées dans le dossier `images/`. Assurez-vous d'utiliser des noms explicites pour les nouvelles images.
 
 ## Déploiement
-Ce portfolio peut être déployé en ligne en utilisant [GitHub Pages](https://pages.github.com/) :
-1. Pousser les modifications sur la branche `main` (ou `master`).
-2. Aller dans les paramètres du dépôt sur GitHub.
-3. Sous l’onglet "Pages", sélectionner la source du déploiement (`main` branch).
-4. Votre portfolio sera accessible à l'URL : `https://ton-nom-utilisateur.github.io/portfolio`.
+Ce portfolio est actuellement déployé en utilisant GitHub Pages. Vous pouvez le voir en ligne à l'adresse : https://pierre-lepage.github.io/portfolio/
+
+Pour déployer vos propres modifications :
+1. Pousser les modifications sur la branche `main`.
+2. GitHub Pages se mettra automatiquement à jour avec vos dernières modifications.
 
 ## Améliorations futures
 - Migrer le site vers une version plus dynamique utilisant **React** et **Node.js**.
@@ -352,13 +353,12 @@ Ce portfolio peut être déployé en ligne en utilisant [GitHub Pages](https://p
 ## Contact
 Pour toute question ou proposition, n'hésitez pas à me contacter :
 - **Email** : plepage@gmail.com
-- **LinkedIn** : [Pierre Lepage](https://linkedin.com/in/yourprofile)
-- **GitHub** : [PierreLepage](https://github.com/yourusername)
+- **LinkedIn** : [Pierre Lepage](https://www.linkedin.com/in/pierre-lepage-b00668ba/)
+- **GitHub** : [Pierre-Lepage](https://github.com/Pierre-Lepage)
 
 ---
 
 © 2024 Pierre Lepage. Tous droits réservés.
-
 ```
 
 # .gitignore
@@ -442,25 +442,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Parallax
 
-document.addEventListener('DOMContentLoaded', function() {
-    const parallaxElements = document.querySelectorAll('.parallax');
-    const initialOffset = window.innerHeight; // Hauteur initiale de la fenêtre
+const background = document.querySelector('.background');
+const initialOffset = 200; // Correspond à la valeur dans le CSS
 
-    window.addEventListener('load', function() {
-        window.dispatchEvent(new Event('scroll'));
-    });
-    
-
-    window.addEventListener('scroll', function() {
-        let scrollPosition = window.pageYOffset;
-
-        parallaxElements.forEach(element => {
-            let speed = element.dataset.speed;
-            // Ajustez la position en fonction de la hauteur initiale
-            let yPos = (scrollPosition - initialOffset) * speed;
-            element.style.transform = `translateY(${yPos}px)`;
-        });
-    });
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.pageYOffset;
+    let newPosition = 100 + initialOffset - (scrollPosition * 0.3);
+    background.style.backgroundPositionY = `calc(100% + ${newPosition}px)`;
 });
 
 //Chronologie
@@ -585,6 +573,66 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit)
 ```
+
+# images/portrait2.png
+
+This is a binary file of the type: Image
+
+# images/portrait.png
+
+This is a binary file of the type: Image
+
+# images/portrait-fond.psd
+
+This is a binary file of the type: Binary
+
+# images/portrait-fond.png
+
+This is a binary file of the type: Image
+
+# images/inovuSite.pdf
+
+This is a binary file of the type: PDF
+
+# images/foxSpiritSite.pdf
+
+This is a binary file of the type: PDF
+
+# images/fond2.svg
+
+This is a file of the type: SVG Image
+
+# images/fond2.png
+
+This is a binary file of the type: Image
+
+# images/fond1.svg
+
+This is a file of the type: SVG Image
+
+# images/fond1.png
+
+This is a binary file of the type: Image
+
+# images/chrono2.svg
+
+This is a file of the type: SVG Image
+
+# images/chrono.svg
+
+This is a file of the type: SVG Image
+
+# images/Frame 17.png
+
+This is a binary file of the type: Image
+
+# images/CV-PierreLepage.pdf
+
+This is a binary file of the type: PDF
+
+# images/CV-PierreLepage.jpg
+
+This is a binary file of the type: Image
 
 # css/styles.css
 
@@ -717,10 +765,9 @@ p {
   width: 100%;
   height: 100%;
   background-image: url('../images/fond1.svg');
-  background-position: bottom; /* Changez 'top' en 'bottom' */
-  background-size: cover;
-  background-repeat: repeat;
-  
+  background-position: center calc(100% + 200px); /* Ajusté pour commencer un peu plus haut */
+  background-size: cover; /* Changé pour couvrir toute la zone */
+  background-repeat: no-repeat;
   z-index: -1;
 }
 .text-content {
@@ -1066,7 +1113,7 @@ footer {
 }
 
 .frame-container {
-    height: 90vh; /* Ajustez selon vos besoins pour les appareils mobiles */
+    height: 100%; /* Ajustez selon vos besoins pour les appareils mobiles */
 }
 p {
   font-size: 0.8rem;
@@ -1113,66 +1160,6 @@ p {
 
 } */
 ```
-
-# images/portrait2.png
-
-This is a binary file of the type: Image
-
-# images/portrait.png
-
-This is a binary file of the type: Image
-
-# images/portrait-fond.psd
-
-This is a binary file of the type: Binary
-
-# images/portrait-fond.png
-
-This is a binary file of the type: Image
-
-# images/inovuSite.pdf
-
-This is a binary file of the type: PDF
-
-# images/foxSpiritSite.pdf
-
-This is a binary file of the type: PDF
-
-# images/fond2.svg
-
-This is a file of the type: SVG Image
-
-# images/fond2.png
-
-This is a binary file of the type: Image
-
-# images/fond1.svg
-
-This is a file of the type: SVG Image
-
-# images/fond1.png
-
-This is a binary file of the type: Image
-
-# images/chrono2.svg
-
-This is a file of the type: SVG Image
-
-# images/chrono.svg
-
-This is a file of the type: SVG Image
-
-# images/Frame 17.png
-
-This is a binary file of the type: Image
-
-# images/CV-PierreLepage.pdf
-
-This is a binary file of the type: PDF
-
-# images/CV-PierreLepage.jpg
-
-This is a binary file of the type: Image
 
 # images/projets/thibaudGuide.png
 

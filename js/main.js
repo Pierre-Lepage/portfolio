@@ -27,25 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Parallax
 
-document.addEventListener('DOMContentLoaded', function() {
-    const parallaxElements = document.querySelectorAll('.parallax');
-    const initialOffset = window.innerHeight; // Hauteur initiale de la fenêtre
+const background = document.querySelector('.background');
+const initialOffset = 200; // Correspond à la valeur dans le CSS
 
-    window.addEventListener('load', function() {
-        window.dispatchEvent(new Event('scroll'));
-    });
-    
-
-    window.addEventListener('scroll', function() {
-        let scrollPosition = window.pageYOffset;
-
-        parallaxElements.forEach(element => {
-            let speed = element.dataset.speed;
-            // Ajustez la position en fonction de la hauteur initiale
-            let yPos = (scrollPosition - initialOffset) * speed;
-            element.style.transform = `translateY(${yPos}px)`;
-        });
-    });
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.pageYOffset;
+    let newPosition = 100 + initialOffset - (scrollPosition * 0.3);
+    background.style.backgroundPositionY = `calc(100% + ${newPosition}px)`;
 });
 
 //Chronologie
